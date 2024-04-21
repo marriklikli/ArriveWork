@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ExtraText">
+
+    <item android:title="@string/bilet_button"
+        android:icon="@drawable/travel_24px"
+        android:id="@+id/bilet_button"/>
+    <item android:title="@string/hotel_button"
+        android:icon="@drawable/bed_24px"
+        android:id="@+id/hotel_button"/>
+    <item android:title="@string/short_button"
+        android:icon="@drawable/location_on_24px"
+        android:id="@+id/short_button"/>
+    <item android:title="@string/subscriptions_button"
+        android:icon="@drawable/notifications_24px"
+        android:id="@+id/subscriptions_button"/>
+    <item android:title="@string/profile_button"
+        android:icon="@drawable/person_24px"
+        android:id="@+id/profile_button"/>
+
+</menu>

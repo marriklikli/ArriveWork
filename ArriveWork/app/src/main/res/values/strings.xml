@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ArriveWork</string>
+    <string name="bilet_button">Авиабилеты</string>
+    <string name="hotel_button">Отели</string>
+    <string name="short_button">Короче</string>
+    <string name="subscriptions_button">Подписки</string>
+    <string name="profile_button">Профиль</string>
+    <string name="text_title">Поиск дешевых авиабилетов</string>
+    <string name="whereFrom">Откуда - Москва</string>
+    <string name="where">Куда - Турция</string>
+    <string name="music">Музыкально отлететь</string>
+    <string name="hard_text">Сложный маршрут</string>
+    <string name="anywhere_text">Куда угодно</string>
+    <string name="weekends_text">Выходные</string>
+    <string name="hot_text">Горячие билеты</string>
+    <string name="popular_text">Популярное направление</string>
+    <string name="back_text">Обратно</string>
+    <string name="data_text">Дата</string>
+    <string name="people">1, эконом</string>
+    <string name="filters">Фильтр</string>
+    <string name="all_tiket">Показать все билеты</string>
+    <string name="chart_price">График цен</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

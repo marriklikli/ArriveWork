@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".ticket.AllTiketFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/whereFrom_2"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/grey_3"
+        android:hint="@string/whereFrom"
+        android:textColorHint="@color/white"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/whereFromText_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/grey_3"
+        android:hint="@string/whereFrom"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/back_button_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_back_24px"
+        app:layout_constraintBottom_toBottomOf="@+id/whereFromText_2"
+        app:layout_constraintEnd_toStartOf="@+id/whereFromText_2"
+        app:layout_constraintStart_toStartOf="@+id/whereFromText_2"
+        app:layout_constraintTop_toTopOf="@+id/whereFrom_2"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tiket_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whereFrom_2"
+        tools:listitem="@layout/all_tiket" />
+
+    <Button
+        android:id="@+id/filter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filters"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tiket_list" />
+
+    <Button
+        android:id="@+id/chart_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chart_price"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toEndOf="@+id/filter_button"
+        app:layout_constraintTop_toBottomOf="@+id/tiket_list" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".country.SearchCountryFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/whereFrom_3"
+        android:layout_width="328dp"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:background="@color/grey_3"
+        android:hint="@string/whereFrom"
+        android:textColorHint="@color/white"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/whereFromText_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/where_3"
+        android:layout_width="328dp"
+        android:layout_height="50dp"
+        android:hint="@string/where"
+        app:errorEnabled="true"
+        android:background="@color/grey_3"
+        android:textColorHint="@color/white"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whereFrom_3">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/whereText_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whereFrom_3"
+        tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/change_button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:src="@drawable/arrow_upward_24px"
+        app:layout_constraintBottom_toTopOf="@+id/where_3"
+        app:layout_constraintEnd_toEndOf="@+id/whereFrom_3"
+        app:layout_constraintStart_toEndOf="@+id/whereFrom_3"
+        app:layout_constraintTop_toTopOf="@+id/whereFrom_3"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/change_button_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:src="@drawable/arrow_downward_24px"
+        app:layout_constraintBottom_toBottomOf="@+id/change_button_1"
+        app:layout_constraintEnd_toStartOf="@+id/change_button_1"
+        app:layout_constraintTop_toTopOf="@+id/change_button_1"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/grey_5"
+        android:src="@drawable/add_24px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/where_3"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/back_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_5"
+        android:text="@string/back_text"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/back_button"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintTop_toTopOf="@+id/back_button" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/data"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:background="@color/grey_5"
+        android:text="@string/data_text"
+        app:layout_constraintStart_toEndOf="@+id/back_text"
+        app:layout_constraintTop_toBottomOf="@+id/where_3" />
+
+    <TextView
+        android:id="@+id/people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/people"
+        android:textColor="@color/white"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toEndOf="@+id/data"
+        app:layout_constraintTop_toBottomOf="@+id/where_3"
+        android:background="@color/grey_5"/>
+
+    <TextView
+        android:id="@+id/filters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/grey_5"
+        android:text="@string/filters"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/people"
+        app:layout_constraintTop_toBottomOf="@+id/where_3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/country_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_text"
+        tools:itemCount="3"
+        tools:listitem="@layout/recomend_list"/>
+
+    <Button
+        android:id="@+id/allTiket_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/all_tiket"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/country_list" />
+</androidx.constraintlayout.widget.ConstraintLayout>
